@@ -3,270 +3,245 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>White Westinghouse Warranty Registration Form</title>
+    <title>White Westinghouse Warranty</title>
     <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
-            background-color: #f7f8fa;
+            background-color: #f9f9f9;
             color: #333;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            flex-direction: column;
         }
-        .form-container {
+
+        /* Header */
+        .header {
             background-color: #ffffff;
-            max-width: 700px;
-            width: 100%;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            padding: 30px;
-            box-sizing: border-box;
-            margin-bottom: 10px;
-        }
-        .form-container img {
-            width: 80%;
-            border-radius: 8px;
-            margin-bottom: 20px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .title-box {
-            background-color: #d35400;
-            color: #ffffff;
-            text-align: center;
-            padding: 20px;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-        .title-box h2 {
-            margin: 0;
-            font-size: 1.5em;
-            font-weight: bold;
-        }
-        .title-box p {
-            margin: 0;
-            padding-top: 10px;
-            font-size: 1em;
-            line-height: 1.5;
-            text-align: justify;
-        }
-        .form-container form {
+            padding: 15px 30px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
-            flex-direction: column;
-        }
-        .form-container label {
-            font-weight: bold;
-            color: #333;
-            margin: 10px 0 5px;
-        }
-        .form-container input[type="text"], 
-        .form-container input[type="date"],
-        .form-container input[type="tel"] {
-            padding: 12px;
-            font-size: 1em;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            margin-bottom: 15px;
-            width: 100%;
-            box-sizing: border-box;
-            color: #333;
-        }
-        .form-container input[type="text"]::placeholder {
-            color: #aaa;
-        }
-        .form-container input[type="submit"] {
-            padding: 12px;
-            font-size: 1em;
-            background-color: #1a73e8;
-            color: #ffffff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-            transition: background-color 0.3s;
-        }
-        .form-container input[type="submit"]:hover {
-            background-color: #0f5bb5;
-        }
-        .form-section {
-            margin-bottom: 30px;
-            padding: 15px;
-            background-color: #f0f4f7;
-            border-radius: 8px;
-        }
-        .form-section h3 {
-            margin: 0;
-            font-size: 1.2em;
-            font-weight: bold;
-            color: #333;
-            padding-bottom: 10px;
-        }
-        .form-group {
-            display: flex;
-            flex-wrap: wrap;
+            align-items: center;
             justify-content: space-between;
+        }
+
+        .header img {
+            max-width: 180px;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            align-items: center;
             gap: 20px;
         }
-        .form-group div {
-            width: 48%;
-        }
-        .form-group-vertical div {
-            width: 100%;
-        }
-        .footer-note, .footer-disclaimer {
-            text-align: center;
-            margin-top: 10px;
-            font-size: 0.9em;
-            color: #555;
-            width: 100%;
-            padding: 10px 0;
-        }
-        .footer-note a, .footer-disclaimer a {
-            color: #1a73e8;
+
+        .nav a {
+            color: #333;
             text-decoration: none;
-        }
-        .footer-note a:hover, .footer-disclaimer a:hover {
-            text-decoration: underline;
-        }
-        .footer-disclaimer p {
-            margin: 5px 0;
-        }
-        .footer-disclaimer .trademark {
-            font-size: 0.8em;
-            color: #888;
-        }
-        .authorized-distributor {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 1.1em;
             font-weight: bold;
-            color: #d35400;
-            background-color: #f0f0f0;
-            padding: 10px 0;
-            border-radius: 5px;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #ff7a00;
+        }
+
+        /* HelpLine */
+        .helpline {
+            color: #ff7a00;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #ffffff;
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #666;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* Section Title */
+        .section-title {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #ff7a00;
+            padding-bottom: 5px;
+            display: inline-block;
+        }
+
+        /* Form Sections */
+        .form-section {
+            background-color: #ffffff;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        .form-group input,
+        .form-group textarea {
             width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        /* Button */
+        .submit-btn {
+            background-color: #ff7a00;
+            color: #ffffff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #e66a00;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #ffffff;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+            margin-top: 30px;
+            box-shadow: 0px -4px 8px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
 <body>
 
-    <div class="form-container">
-        <img src="https://i.ibb.co/0YzFwKZ/4000-2000-size.png" alt="White Westinghouse Logo">
+    <!-- Header -->
+    <div class="header">
+        <img src="final-logo.png" alt="White Westinghouse Logo">
+        <div class="nav">
+            <a href="#about">About Us</a>
+            <a href="#shop">Shop Now</a>
+            <a href="#warranty">Warranty</a>
+            <a href="#complaint">Complaint</a>
+            <span class="helpline">HelpLine: +91-1234567890</span>
+        </div>
+    </div>
 
-        <div class="title-box">
-            <h2>White Westinghouse Warranty Registration </h2>
-            <p>Thank you for choosing White Westinghouse. Please complete this 
-               warranty registration form to activate your warranty. By providing 
-               your details, you help us ensure prompt service and support if needed. 
-               Fill in the required fields below.</p>
+    <!-- Main Content -->
+    <div class="main-container">
+
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Welcome to White Westinghouse Warranty Portal</h1>
+            <p>Register your product for warranty or file a complaint. We ensure top-notch support and service for our valued customers.</p>
         </div>
 
-        <form id="customerForm" action="#" method="POST" onsubmit="handleSubmit(event)">
+        <!-- About Section -->
+        <div class="form-section" id="about">
+            <h2 class="section-title">About White Westinghouse</h2>
+            <p>White Westinghouse has a rich history of providing reliable and innovative appliances to households worldwide. Our commitment to quality and customer satisfaction is at the core of our brand, ensuring that every product meets the highest standards of performance and durability.</p>
+        </div>
 
-            <!-- Buyer Information -->
-            <div class="form-section">
-                <h3>Buyer Information</h3>
+        <!-- Warranty Registration Form -->
+        <div class="form-section" id="warranty">
+            <h2 class="section-title">Warranty Registration</h2>
+            <form>
                 <div class="form-group">
-                    <div>
-                        <label for="companyName">Company Name:</label>
-                        <input type="text" id="companyName" name="companyName" placeholder="Type here">
-                    </div>
-                    <div>
-                        <label for="contactPerson">Contact Person Name:</label>
-                        <input type="text" id="contactPerson" name="contactPerson" placeholder="Type here" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div>
-                        <label for="mobileNo">Mobile No:</label>
-                        <input type="tel" id="mobileNo" name="mobileNo" placeholder="Type here" required>
-                    </div>
-                    <div>
-                        <label for="deliveryCity">City (Delivery Location):</label>
-                        <input type="text" id="deliveryCity" name="deliveryCity" placeholder="Type here" required>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Supplier Information -->
-            <div class="form-section">
-                <h3>Supplier Information</h3>
-                <div class="form-group">
-                    <div>
-                        <label for="supplierName">Name of Supplier:</label>
-                        <input type="text" id="supplierName" name="supplierName" placeholder="Type here" required>
-                    </div>
-                    <div>
-                        <label for="invoiceNo">Invoice Number:</label>
-                        <input type="text" id="invoiceNo" name="invoiceNo" placeholder="Type here" required>
-                    </div>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
                 <div class="form-group">
-                    <div>
-                        <label for="invoiceDate">Invoice Date:</label>
-                        <input type="date" id="invoiceDate" name="invoiceDate" required>
-                    </div>
-                    <div>
-                        <label for="supplierContact">Supplier's Contact Email/Phone:</label>
-                        <input type="text" id="supplierContact" name="supplierContact" placeholder="Type here" required>
-                    </div>
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
-            </div>
-
-            <!-- Product Details -->
-            <div class="form-section">
-                <h3>Product Details</h3>
-                <div class="form-group-vertical">
-                    <div>
-                        <label for="product">Product:</label>
-                        <input type="text" id="product" name="product" placeholder="Type here" required>
-                    </div>
-                    <div>
-                        <label for="modelNo">Model Number:</label>
-                        <input type="text" id="modelNo" name="modelNo" placeholder="Type here" required>
-                    </div>
-                    <div>
-                        <label for="serialNo">Serial Number:</label>
-                        <input type="text" id="serialNo" name="serialNo" placeholder="Type here" required>
-                    </div>
+                <div class="form-group">
+                    <label for="product">Product Model</label>
+                    <input type="text" id="product" name="product" required>
                 </div>
-                <p class="note">* If there are multiple Product, Model no and Serial numbers, separate them with commas.</p>
-            </div>
+                <div class="form-group">
+                    <label for="purchase">Purchase Date</label>
+                    <input type="date" id="purchase" name="purchase" required>
+                </div>
+                <div class="form-group">
+                    <label for="serial">Serial Number</label>
+                    <input type="text" id="serial" name="serial" required>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
 
-            <input type="submit" value="Submit">
-        </form>
+        <!-- Complaint Registration Form -->
+        <div class="form-section" id="complaint">
+            <h2 class="section-title">Complaint Registration</h2>
+            <form>
+                <div class="form-group">
+                    <label for="complaint-name">Full Name</label>
+                    <input type="text" id="complaint-name" name="complaint-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="complaint-email">Email</label>
+                    <input type="email" id="complaint-email" name="complaint-email" required>
+                </div>
+                <div class="form-group">
+                    <label for="complaint-description">Description of Complaint</label>
+                    <textarea id="complaint-description" name="complaint-description" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </div>
+
     </div>
 
-    <!-- Footer Section with Legal Disclaimer -->
-    <div class="footer-disclaimer">
-        <p><strong>White Westinghouse<sup style="font-size: 0.8em; vertical-align: super;">&reg;</sup></strong></p>
-        <p>1234 Some Street, Suite 500, City, Country 12345</p>
-        <p>&copy; 2024 White Westinghouse. All rights reserved.</p>
-        <p><a href="https://www.white-westinghouse.com/privacy-policy" target="_blank">Privacy Policy</a> | <a href="https://www.white-westinghouse.com/terms-and-conditions" target="_blank">Terms and Conditions</a> | <a href="https://kridovia.com/white-westinghouse" target="_blank">Authorised Distributor</a></p>
-        <p class="trademark">White Westinghouse is a pending or registered trademark under license from Electrolux Home Products, Inc.</p>
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2024 White Westinghouse. All rights reserved.</p>
     </div>
 
-    <script>
-        function handleSubmit(event) {
-            event.preventDefault();
-            const data = {
-                invoiceNo: document.getElementById('invoiceNo').value,
-                dateOfPurchase: document.getElementById('dateOfPurchase').value,
-                supplierName: document.getElementById('supplierName').value,
-                product: document.getElementById('product').value,
-                modelNo: document.getElementById('modelNo').value,
-                serialNo: document.getElementById('serialNo').value,
-                nameOfBuyer: document.getElementById('nameOfBuyer').value,
-                mobileNo: document.getElementById('mobileNo').value
-            };
-            alert('Warranty Registration Submitted! Thank you for your submission.');
-            console.log(data);
-        }
-    </script>
 </body>
 </html>
